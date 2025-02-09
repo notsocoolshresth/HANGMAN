@@ -1,0 +1,265 @@
+body {
+  background-color: #2d3142;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #F9F4DA;
+  box-sizing: border-box;
+}
+
+.App {
+  background-color: #282726;
+  width: 50%;
+  height: 80vh;
+  margin: 10vh auto;
+  padding: 20px;
+  border-radius: 3px;
+  text-align: center;
+   position: relative; 
+}
+header {
+  text-align: center;
+  padding: 0 px;
+  width: 60%;
+  margin: 0 auto;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.header-content {
+  flex: 1;
+}
+.message-container {
+  height: 120px;
+  position: relative;
+  margin: 10px 0;
+}
+
+/* Remove .farewellmessage from this grouping */
+.ended-win, .ended-lose {
+  position: relative;
+  width: 100%;
+  padding: 2px;
+  border-radius: 5px;
+  margin: 0px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.farewellmessage {
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  top: 200px;  /* Adjust this value to match the header message position */
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 5px;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  background-color: #9d0fc8;
+  color: #F9F4DA;
+  z-index: 10;
+  height: 50px;
+   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: dotted;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.ended-win {
+  background-color: #00A86B;
+}
+
+.ended-lose {
+  background-color:
+#BA2A2A;
+}
+
+
+.language-list {
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.languages {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #FF9F1C;
+  color: #282726;
+  cursor: pointer;
+}
+.Alphabets {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.alpha {
+  font-size: 1.5rem;
+  padding: 16px;
+  margin: 2px;
+  border: 1px solid #F9F4DA;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-underline-offset: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.alpha:hover {
+  background-color: #F9F4DA;
+  color: #282726;
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+.alpha:active {
+  background-color: #eec911;
+  color: #cf771f;
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.word-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.letter {
+  font-size: 2rem;
+  margin: 5px 5px;
+  padding: 10px;
+  border: 2px solid #F9F4DA;
+  border-radius: 5px;
+  
+  display: inline-block;
+ 
+  cursor: pointer;
+  color: #F9F4DA;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
+.barofwords{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+.alphacorrect{
+   font-size: 1.5rem;
+  padding: 16px;
+  margin: 2px;
+  border: 1.5px solid #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-underline-offset: 2px;
+  width: 15px;
+  height: 15px;
+  background-color: 
+#10A95B;
+  color: #1E1E1E;
+}
+.alphawrong{
+   font-size: 1.5rem;
+  padding: 16px;
+  margin: 2px;
+  border: 1px solid #f10606;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-underline-offset: 2px;
+  width: 15px;
+  height: 15px;
+  background-color: 
+#EC5D49;
+  color: #1E1E1E;
+}
+
+.alphacorrecttotal{
+  font-size: 1.5rem;
+  padding: 16px;
+  margin: 2px;
+  border: 1px solid #F9F4DA;
+  border-radius: 4px;
+  color:#34f289;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-underline-offset: 2px;
+  width: 15px;
+  height: 15px;
+ cursor: not-allowed;
+    opacity: 0.5;
+}
+.alphawrongtotal{
+  font-size: 1.5rem;
+  padding: 16px;
+  margin: 2px;
+  border: 1px solid #ebc50a;
+  border-radius: 4px;
+  color:#a450d5;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-underline-offset: 2px;
+  width: 15px;
+  height: 15px;
+ cursor: not-allowed;
+    opacity: 0.5;
+}
+.reset{
+  width: 135px;
+  position: inherit;
+  bottom:30px;
+  background-color:
+#11B5E5;
+  color: #282726;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.2s ease;
+  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
